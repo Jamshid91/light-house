@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="shortcut icon" href="../assets/img/png/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/style/plugin/bootstrap.css">
+    <link rel="stylesheet" href="../assets/style/css/main.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-between">
+                <div class="col-lg-4 col-2">
+                    <a href="../index.html" class="w-100">
+                        <img loading="lazy"src="../assets/img/png/logo.png" alt="logo" class="nav__logo w-100 d-none d-lg-block">
+                        <img loading="lazy"src="../assets/img/png/favicon.png" alt="logo" class="nav__logo-mob d-lg-none">
+                    </a>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <p class="nav__contact">Контактное лицо: <span class="nav__contact-admin">Коротков Роман</span></p>
+                    <a href="mailto: korotkov@electro-rzn.ru" class="nav__contact-link d-flex align-items-center">
+                        <svg class="me-2" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3L0 15C0 15.7956 0.31607 16.5587 0.87868 17.1213C1.44129 17.6839 2.20435 18 3 18H21C21.7956 18 22.5587 17.6839 23.1213 17.1213C23.6839 16.5587 24 15.7956 24 15V3C24 2.20435 23.6839 1.44129 23.1213 0.87868C22.5587 0.316071 21.7956 0 21 0ZM2 5.822L7.933 9.6L2 14.683V5.822ZM9.651 10.759C9.666 10.746 9.672 10.727 9.687 10.713L10.926 11.502C11.2474 11.7052 11.6198 11.813 12 11.813C12.3802 11.813 12.7526 11.7052 13.074 11.502L14.314 10.713C14.328 10.727 14.334 10.746 14.35 10.759L20.464 16H3.537L9.651 10.759ZM22 14.683L16.067 9.6L22 5.822V14.683ZM3 2H21C21.2652 2 21.5196 2.10536 21.7071 2.29289C21.8946 2.48043 22 2.73478 22 3V3.451L12 9.814L2 3.451V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2Z" fill="white"/>
+                        </svg>
+                        korotkov@electro-rzn.ru
+                    </a>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <p class="nav__phone-text d-flex align-items-center">
+                        <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_55)">
+                            <path d="M13.4437 1.49375C15.9159 1.49375 18.152 2.49754 19.7779 4.12199C21.4024 5.74793 22.4062 7.98407 22.4062 10.4562C22.4062 10.8685 22.7408 11.2031 23.1531 11.2031C23.5653 11.2031 23.8999 10.8685 23.8999 10.4562C23.8984 4.68887 19.2111 0.00149375 13.4437 0C13.0314 0 12.6968 0.334599 12.6968 0.746873C12.6968 1.15915 13.0314 1.49375 13.4437 1.49375Z" fill="white"/>
+                            <path d="M13.4437 4.48129C15.0921 4.48129 16.5821 5.14974 17.6665 6.23346C18.7502 7.31792 19.4187 8.80793 19.4187 10.4563C19.4187 10.8685 19.7533 11.2031 20.1656 11.2031C20.5778 11.2031 20.9124 10.8685 20.9124 10.4563C20.9109 6.33578 17.5642 2.98904 13.4437 2.98755C13.0314 2.98755 12.6968 3.32215 12.6968 3.73442C12.6968 4.14669 13.0314 4.48129 13.4437 4.48129Z" fill="white"/>
+                            <path d="M13.4437 7.46872C15.0891 7.47171 16.4282 8.8101 16.4312 10.4562C16.4312 10.8685 16.7658 11.2031 17.1781 11.2031C17.5903 11.2031 17.9249 10.8685 17.9249 10.4562C17.9235 7.98257 15.9166 5.97647 13.4437 5.97498C13.0314 5.97498 12.6968 6.30957 12.6968 6.72185C12.6968 7.13412 13.0314 7.46872 13.4437 7.46872Z" fill="white"/>
+                            <path d="M19.1192 13.3309C18.6838 12.8948 18.1057 12.6737 17.5351 12.6744C16.9644 12.6737 16.3864 12.8948 15.9509 13.3309L14.8949 14.387C14.747 14.5341 14.5603 14.6051 14.3668 14.6058C14.1734 14.6051 13.9867 14.5341 13.8388 14.387L9.61373 10.162C9.4666 10.0141 9.39564 9.82735 9.3949 9.63391C9.39564 9.44047 9.4666 9.25375 9.61373 9.10587L10.6698 8.04979C11.106 7.61437 11.3271 7.03629 11.3263 6.46568C11.3271 5.89507 11.106 5.31699 10.6698 4.88156L6.44475 0.656503C6.00858 0.220329 5.43124 -0.000744987 4.85989 1.88607e-06C4.28928 -0.000744987 3.7112 0.220329 3.27577 0.656503L1.16287 2.76866C0.365209 3.55586 -0.00748079 4.55817 -1.20628e-05 5.55599C0.023141 7.57702 1.28685 9.5779 2.80151 11.4854C4.32737 13.3847 6.16766 15.166 7.50083 16.4999C8.83474 17.8331 10.616 19.6734 12.5153 21.1992C14.4228 22.7139 16.4237 23.9776 18.4447 24.0008C19.4426 24.0082 20.4441 23.6355 21.2321 22.8379L23.345 20.7257C23.7812 20.2903 24.0022 19.7122 24.0015 19.1416C24.0022 18.5702 23.7812 17.9929 23.345 17.5575L19.1192 13.3309ZM4.33185 1.71258C4.47973 1.56545 4.66645 1.49449 4.85989 1.49375C5.05333 1.49449 5.24005 1.56545 5.38793 1.71258L9.61298 5.93764C9.76012 6.08552 9.83107 6.27224 9.83182 6.46568C9.83107 6.65912 9.76012 6.84584 9.61298 6.99372L9.08494 7.52176L3.80381 2.24062L4.33185 1.71258ZM20.1753 21.781C19.6383 22.3076 19.1057 22.4988 18.444 22.5063C17.1108 22.5294 15.2422 21.4913 13.4504 20.0341C11.6497 18.5889 9.90053 16.7875 8.55691 15.4431C7.21253 14.0995 5.41183 12.3503 3.96588 10.5496C2.50948 8.75783 1.47133 6.88915 1.49373 5.55599C1.5012 4.89426 1.6924 4.36248 2.21895 3.82474L2.74698 3.2967L8.13492 8.68464C7.99152 8.98787 7.89966 9.30753 7.89966 9.63391C7.89891 10.2045 8.11999 10.7826 8.55616 11.218L12.7812 15.4431C13.2166 15.8793 13.7947 16.1003 14.3653 16.0996C14.6917 16.1003 15.0114 16.0077 15.3146 15.8643L20.7025 21.2523L20.1753 21.781ZM22.2882 19.6681L21.7601 20.1962L16.479 14.915L17.007 14.387C17.1549 14.2399 17.3416 14.1689 17.5351 14.1682C17.7285 14.1689 17.9152 14.2399 18.0631 14.387L22.2882 18.6121C22.4353 18.7599 22.5062 18.9467 22.507 19.1401C22.5055 19.3343 22.4353 19.521 22.2882 19.6681Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_1_55">
+                            <rect width="24.0007" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        Позвоните нам и мы рассчитаем <br>
+                        стоимость работ по телефону:
+                    </p>
+                    <a href="tel: +7 920 631 64 84" class="nav__phone-link">+7 (920) 631-64-84</a>
+                </div>
+                <div class="col-7 d-lg-none d-flex justify-content-center flex-column align-items-center">
+                    <div class="w-auto">
+                        <a href="mailto: korotkov@electro-rzn.ru" class="nav__contact-link d-inline-block align-items-center">
+                            <svg class="me-2" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3L0 15C0 15.7956 0.31607 16.5587 0.87868 17.1213C1.44129 17.6839 2.20435 18 3 18H21C21.7956 18 22.5587 17.6839 23.1213 17.1213C23.6839 16.5587 24 15.7956 24 15V3C24 2.20435 23.6839 1.44129 23.1213 0.87868C22.5587 0.316071 21.7956 0 21 0ZM2 5.822L7.933 9.6L2 14.683V5.822ZM9.651 10.759C9.666 10.746 9.672 10.727 9.687 10.713L10.926 11.502C11.2474 11.7052 11.6198 11.813 12 11.813C12.3802 11.813 12.7526 11.7052 13.074 11.502L14.314 10.713C14.328 10.727 14.334 10.746 14.35 10.759L20.464 16H3.537L9.651 10.759ZM22 14.683L16.067 9.6L22 5.822V14.683ZM3 2H21C21.2652 2 21.5196 2.10536 21.7071 2.29289C21.8946 2.48043 22 2.73478 22 3V3.451L12 9.814L2 3.451V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2Z" fill="white"/>
+                            </svg>
+                            korotkov@electro-rzn.ru
+                        </a> <br>
+                        <a href="tel: +7 920 631 64 84" class="nav__phone-link">
+                            <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_55)">
+                                <path d="M13.4437 1.49375C15.9159 1.49375 18.152 2.49754 19.7779 4.12199C21.4024 5.74793 22.4062 7.98407 22.4062 10.4562C22.4062 10.8685 22.7408 11.2031 23.1531 11.2031C23.5653 11.2031 23.8999 10.8685 23.8999 10.4562C23.8984 4.68887 19.2111 0.00149375 13.4437 0C13.0314 0 12.6968 0.334599 12.6968 0.746873C12.6968 1.15915 13.0314 1.49375 13.4437 1.49375Z" fill="white"/>
+                                <path d="M13.4437 4.48129C15.0921 4.48129 16.5821 5.14974 17.6665 6.23346C18.7502 7.31792 19.4187 8.80793 19.4187 10.4563C19.4187 10.8685 19.7533 11.2031 20.1656 11.2031C20.5778 11.2031 20.9124 10.8685 20.9124 10.4563C20.9109 6.33578 17.5642 2.98904 13.4437 2.98755C13.0314 2.98755 12.6968 3.32215 12.6968 3.73442C12.6968 4.14669 13.0314 4.48129 13.4437 4.48129Z" fill="white"/>
+                                <path d="M13.4437 7.46872C15.0891 7.47171 16.4282 8.8101 16.4312 10.4562C16.4312 10.8685 16.7658 11.2031 17.1781 11.2031C17.5903 11.2031 17.9249 10.8685 17.9249 10.4562C17.9235 7.98257 15.9166 5.97647 13.4437 5.97498C13.0314 5.97498 12.6968 6.30957 12.6968 6.72185C12.6968 7.13412 13.0314 7.46872 13.4437 7.46872Z" fill="white"/>
+                                <path d="M19.1192 13.3309C18.6838 12.8948 18.1057 12.6737 17.5351 12.6744C16.9644 12.6737 16.3864 12.8948 15.9509 13.3309L14.8949 14.387C14.747 14.5341 14.5603 14.6051 14.3668 14.6058C14.1734 14.6051 13.9867 14.5341 13.8388 14.387L9.61373 10.162C9.4666 10.0141 9.39564 9.82735 9.3949 9.63391C9.39564 9.44047 9.4666 9.25375 9.61373 9.10587L10.6698 8.04979C11.106 7.61437 11.3271 7.03629 11.3263 6.46568C11.3271 5.89507 11.106 5.31699 10.6698 4.88156L6.44475 0.656503C6.00858 0.220329 5.43124 -0.000744987 4.85989 1.88607e-06C4.28928 -0.000744987 3.7112 0.220329 3.27577 0.656503L1.16287 2.76866C0.365209 3.55586 -0.00748079 4.55817 -1.20628e-05 5.55599C0.023141 7.57702 1.28685 9.5779 2.80151 11.4854C4.32737 13.3847 6.16766 15.166 7.50083 16.4999C8.83474 17.8331 10.616 19.6734 12.5153 21.1992C14.4228 22.7139 16.4237 23.9776 18.4447 24.0008C19.4426 24.0082 20.4441 23.6355 21.2321 22.8379L23.345 20.7257C23.7812 20.2903 24.0022 19.7122 24.0015 19.1416C24.0022 18.5702 23.7812 17.9929 23.345 17.5575L19.1192 13.3309ZM4.33185 1.71258C4.47973 1.56545 4.66645 1.49449 4.85989 1.49375C5.05333 1.49449 5.24005 1.56545 5.38793 1.71258L9.61298 5.93764C9.76012 6.08552 9.83107 6.27224 9.83182 6.46568C9.83107 6.65912 9.76012 6.84584 9.61298 6.99372L9.08494 7.52176L3.80381 2.24062L4.33185 1.71258ZM20.1753 21.781C19.6383 22.3076 19.1057 22.4988 18.444 22.5063C17.1108 22.5294 15.2422 21.4913 13.4504 20.0341C11.6497 18.5889 9.90053 16.7875 8.55691 15.4431C7.21253 14.0995 5.41183 12.3503 3.96588 10.5496C2.50948 8.75783 1.47133 6.88915 1.49373 5.55599C1.5012 4.89426 1.6924 4.36248 2.21895 3.82474L2.74698 3.2967L8.13492 8.68464C7.99152 8.98787 7.89966 9.30753 7.89966 9.63391C7.89891 10.2045 8.11999 10.7826 8.55616 11.218L12.7812 15.4431C13.2166 15.8793 13.7947 16.1003 14.3653 16.0996C14.6917 16.1003 15.0114 16.0077 15.3146 15.8643L20.7025 21.2523L20.1753 21.781ZM22.2882 19.6681L21.7601 20.1962L16.479 14.915L17.007 14.387C17.1549 14.2399 17.3416 14.1689 17.5351 14.1682C17.7285 14.1689 17.9152 14.2399 18.0631 14.387L22.2882 18.6121C22.4353 18.7599 22.5062 18.9467 22.507 19.1401C22.5055 19.3343 22.4353 19.521 22.2882 19.6681Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1_55">
+                                <rect width="24.0007" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            +7 (920) 631-64-84
+                        </a>
+                    </div>
+                </div>
+                <div class="col-2 d-lg-none">
+                    <div class="menu-burger justify-content-center d-flex">
+                        <div class="menu-burger-item flex justify-between flex-col">
+                            <div class="menu-burger-list" id="burger_list1"></div>
+                            <div class="menu-burger-list" id="burger_list2"></div>
+                            <div class="menu-burger-list" id="burger_list3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header d-none d-lg-flex">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                        <ul class="header-item">
+                            <li class="header-list"><a href="../index.html" class="header-list__link">главная</a></li>
+                            <li class="header-list"><a href="./news.html" class="header-list__link">новости</a></li>
+                            <li class="header-list"><a href="./about_us.html" class="header-list__link">о нас</a></li>
+                            <li class="header-list"><a href="./price.html" class="header-list__link">прайс</a></li>
+                            <li class="header-list"><a href="./catalog2.html" class="header-list__link active">каталог электротоваров</a></li>
+                            <li class="header-list"><a href="./contact.html" class="header-list__link">контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu">
+        <ul class="d-flex justify-content-center flex-column">
+            <li class="mobile-menu-list"><a href="../index.html" class="mobile-menu-list__link">главная</a></li>
+            <li class="mobile-menu-list"><a href="./news.html" class="mobile-menu-list__link">новости</a></li>
+            <li class="mobile-menu-list"><a href="./about_us.html" class="mobile-menu-list__link">о нас</a></li>
+            <li class="mobile-menu-list"><a href="./price.html" class="mobile-menu-list__link">прайс</a></li>
+            <li class="mobile-menu-list"><a href="./catalog2.html" class="mobile-menu-list__link active">каталог электротоваров</a></li>
+            <li class="mobile-menu-list"><a href="./contact.html" class="mobile-menu-list__link">контакты</a></li>
+        </ul>
+    </div>
+    <!-- End header -->
+
+    <main class="main position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex">
+                    <div class="services">
+                        <div class="services__close d-md-none">
+                            <svg class="" fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"/></svg>
+                        </div>
+                        <p class="services__title">Наши услуги</p>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Электромонтажные работы под ключ</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Ремонт и замена старой электрики</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link active_list">Прокладка кабелей</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Монтаж электропроводки</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Проектирование электроснабжения</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Замена электропроводки</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Ремонт электропроводки</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Прокладка электропроводки</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Замена счетчиков электроэнергии</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Подключение электроплит</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Монтаж и подключение бензо/дизель генераторов с автозапуском и без</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Установка систем «Умный Дом»</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Сборка ВРУ, ГРЩ</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Монтаж и подключение
+                                стабилизаторов напряжения и ИБП</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Установка точечных светильников</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Электропроводка в частном доме</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Установка домофонов, охранные 
+                                системы и видеонаблюдение</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Расчет стоимости работ online</a>
+                        </div>
+
+                        <form class="services-form">
+                            <p class="services-form__title">Заявка на расчет <br> стоимости работ</p>
+                            <input type="text" class="services-form__inp" name="User name" placeholder="Введите Ваше имя" required>
+                            <input type="text" class="services-form__inp phone" name="User phone" placeholder="Введите Ваш телефон" required>
+                            <button type="submit" class="services-form__btn">отправить заявку</button>
+                        </form>
+                    </div>
+                    <div class="main-item">
+                        <div class="main-item-sup">
+                            <a href="../index.html" class="main-item-sup__home">Главная</a>
+                            <span> » </span>
+                            <span class="main-item-sup__text">Каталог электротоваров</span>
+                        </div>
+                        <div class="services__btn d-md-none">Наши услуги</div>
+                        <p class="main-item__title">Каталог электротоваров</p>
+                        <p class="main-item__title-sub">Каталог электротоваров для успешного использования услуг 
+                            по монтажу энергосистемы</p>
+                        <p class="main-item__text">При обращении в нашу компанию за услугой монтажа электропроводки, вам не стоит беспокоиться о приобретении необходимых для этого материалов. Каталог нашего сайта предоставляет электротовары для проведения работ различной степени сложности. Мы заключили договор напрямую с производителями, что дает возможность реализовывать электротовары в Рязани по доступным для наших клиентов ценам.</p> <br>
+                        <p class="main-item__title-sub">Что относится к категории электротоваров? Это продукция следующего формата:</p><br>
+                        <ul class="main-item-ul">
+                            <li class="main-item__text">Кабели, провода различного сечения.</li>
+                            <li class="main-item__text">Электроустановочные изделия: розетки, выключатели, рамки для розеток, светорегуляторы, счетчики.</li>
+                            <li class="main-item__text">Светильники для улиц и помещений, прожекторы, опоры, кронштейны, люстры, бра, лампы.</li>
+                        </ul><br>
+                        <p class="main-item__text">Электротовары от нашей компании представляют интерес не только для владельцев домов и квартир, но и монтажников других фирм или дизайнеров.</p><br>
+                        <p class="main-item__title-sub">Электротовары в Рязани: цены, качество, удобство эксплуатации</p>
+                        <div class="main-item-middle">
+                            <div class="main-item-middle-info">
+                                <p class="main-item__text">Монтаж электропроводки в жилом помещении, офисе, промышленном комплексе имеет огромное значение. От использования качественных электротоваров также зависит пожаробезопасность энергосистемы.</p><br>
+                                <p class="main-item__text">Все комплектующие материалы на нашем сайте имеют отличное качество и рассчитаны на долгий срок эксплуатации, а их стоимость значительно ниже, чем в обычных магазинах электротоваров. С нашей продукцией электрические бытовые приборы и компьютерная техника ваших домов, квартир и офисов будет в целости и сохранности. Цены на электротовары у нас самые демократичные.</p>
+                            </div>
+                            <img src="../assets/img/png/catalog.png" alt="" class="main-item-middle__img">
+                        </div>
+                        <p class="main-item__text-title">Компания предлагает услуги по доступным расценкам на электромонтажные работы:</p><br>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="catalog">
+                                    <p class="catalog__text">Замена счетчиков <br>  электроэнергии</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="catalog">
+                                    <p class="catalog__text">Подключение <br> электроплиты</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="catalog">
+                                    <p class="catalog__text">Установка <br> светильников</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="main-item__text">Техническое совершенство и легкость управления нашими электротоварами удивят вас своей ценовой доступностью. Обращайтесь к нам за помощью! Не отказывайте себе в самом необходимом — получении качественных электротоваров и услуг по их монтажу.</p>
+
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <div class="catalog-card d-flex align-items-center justify-content-center  justify-content-between">
+                                    <div class="d-flex align-items-center flex-column flex-sm-row">
+                                        <img src="../assets/img/png/led.png" alt="" class="catalog-card__img">
+                                        <div class="">
+                                            <p class="catalog-card__title">Светильник</p>
+                                            <p class="catalog-card__title-sub">Технические характеристики:</p>
+                                            <ul class="catalog-card-list">
+                                                <li>Первая характеристика</li>
+                                                <li>Вторая</li>
+                                                <li>Третья</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <span class="catalog-card__price">300.63 ₽</span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="catalog-card d-flex align-items-center justify-content-center  justify-content-between">
+                                    <div class="d-flex align-items-center flex-column flex-sm-row">
+                                        <img src="../assets/img/png/led.png" alt="" class="catalog-card__img">
+                                        <div class="">
+                                            <p class="catalog-card__title">Светильник</p>
+                                            <p class="catalog-card__title-sub">Технические характеристики:</p>
+                                            <ul class="catalog-card-list">
+                                                <li>Первая характеристика</li>
+                                                <li>Вторая</li>
+                                                <li>Третья</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <span class="catalog-card__price">300.63 ₽</span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="catalog-card d-flex align-items-center justify-content-center  justify-content-between">
+                                    <div class="d-flex align-items-center flex-column flex-sm-row">
+                                        <img src="../assets/img/png/led.png" alt="" class="catalog-card__img">
+                                        <div class="">
+                                            <p class="catalog-card__title">Светильник</p>
+                                            <p class="catalog-card__title-sub">Технические характеристики:</p>
+                                            <ul class="catalog-card-list">
+                                                <li>Первая характеристика</li>
+                                                <li>Вторая</li>
+                                                <li>Третья</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <span class="catalog-card__price">300.63 ₽</span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="catalog-card d-flex align-items-center justify-content-center  justify-content-between">
+                                    <div class="d-flex align-items-center flex-column flex-sm-row">
+                                        <img src="../assets/img/png/led.png" alt="" class="catalog-card__img">
+                                        <div class="">
+                                            <p class="catalog-card__title">Светильник</p>
+                                            <p class="catalog-card__title-sub">Технические характеристики:</p>
+                                            <ul class="catalog-card-list">
+                                                <li>Первая характеристика</li>
+                                                <li>Вторая</li>
+                                                <li>Третья</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <span class="catalog-card__price">300.63 ₽</span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="catalog-card d-flex align-items-center justify-content-center  justify-content-between">
+                                    <div class="d-flex align-items-center flex-column flex-sm-row">
+                                        <img src="../assets/img/png/led.png" alt="" class="catalog-card__img">
+                                        <div class="">
+                                            <p class="catalog-card__title">Светильник</p>
+                                            <p class="catalog-card__title-sub">Технические характеристики:</p>
+                                            <ul class="catalog-card-list">
+                                                <li>Первая характеристика</li>
+                                                <li>Вторая</li>
+                                                <li>Третья</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <span class="catalog-card__price">300.63 ₽</span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="catalog-card d-flex align-items-center justify-content-center  justify-content-between">
+                                    <div class="d-flex align-items-center flex-column flex-sm-row">
+                                        <img src="../assets/img/png/led.png" alt="" class="catalog-card__img">
+                                        <div class="">
+                                            <p class="catalog-card__title">Светильник</p>
+                                            <p class="catalog-card__title-sub">Технические характеристики:</p>
+                                            <ul class="catalog-card-list">
+                                                <li>Первая характеристика</li>
+                                                <li>Вторая</li>
+                                                <li>Третья</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <span class="catalog-card__price">300.63 ₽</span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="catalog-card d-flex align-items-center justify-content-center  justify-content-between">
+                                    <div class="d-flex align-items-center flex-column flex-sm-row">
+                                        <img src="../assets/img/png/led.png" alt="" class="catalog-card__img">
+                                        <div class="">
+                                            <p class="catalog-card__title">Светильник</p>
+                                            <p class="catalog-card__title-sub">Технические характеристики:</p>
+                                            <ul class="catalog-card-list">
+                                                <li>Первая характеристика</li>
+                                                <li>Вторая</li>
+                                                <li>Третья</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <span class="catalog-card__price">300.63 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="catalog-arrows d-flex align-items-center justify-content-center justify-content-md-start">
+                                    <span class="">&#10094;&#10094;</span>
+                                    <span class="mx-4">&#10094;</span>
+
+                                    <div class="flex">
+                                        <a href="#" class="">1</a>
+                                        <a href="#" class="">2</a>
+                                        <a href="#" class="active">3</a>
+                                        <a href="#" class="">4</a>
+                                        <a href="#" class="">5</a>
+                                    </div>
+
+                                    <span class="mx-4">&#10095;</span>
+                                    <span class="">&#10095;&#10095;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- End main -->
+
+    <div class="aside">
+        <div class="aside-bg"></div>
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-lg-7 col-md-10">
+                    <form class="aside-form text-center">
+                        <p class="aside-form__title">Заявка на расчет <br> стоимости работ</p>
+                        <p class="aside-form__text">Наши специалисты перезвонят вам, рассчитают <br> стоимость работ и проконсультируют <br>
+                            <strong>по всем интересующим вас вопросам</strong></p>
+                        <div class="d-flex justify-content-between flex-wrap">
+                            <input type="text" class="aside-form__inp" maxlength="15" minlength="3" placeholder="Введите Ваше имя" required>
+                            <input type="tel" class="aside-form__inp phone" placeholder="Введите Ваш телефон" required>
+                        </div>
+                        <button class="aside-form__btn" type="submit">отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End aside -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row d-flex justify-content-between row-sup">
+                <div class="col-12 text-center d-lg-none mb-4">
+                    <a href="./index.html" class="w-100">
+                        <img loading="lazy"src="../assets/img/png/logo.png" alt="logo" class="footer__logo">
+                    </a>
+                </div>
+                <div class="col-lg-3 pe-0 d-none d-lg-block">
+                    <a href="../index.html" class="w-100">
+                        <img loading="lazy"src="../assets/img/png/logo.png" alt="logo" class="footer__logo">
+                    </a>
+                    <p class="footer__add">г. Михайлов, ул. Привокзальный Поселок, д. 7</p>
+                    <p class="footer__contact">Контактное лицо: <span class="footer__contact-admin">Коротков Роман</span></p>
+                    <a href="mailto: korotkov@electro-rzn.ru" class="footer__contact-link d-flex align-items-center">
+                        <svg class="me-2" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3L0 15C0 15.7956 0.31607 16.5587 0.87868 17.1213C1.44129 17.6839 2.20435 18 3 18H21C21.7956 18 22.5587 17.6839 23.1213 17.1213C23.6839 16.5587 24 15.7956 24 15V3C24 2.20435 23.6839 1.44129 23.1213 0.87868C22.5587 0.316071 21.7956 0 21 0ZM2 5.822L7.933 9.6L2 14.683V5.822ZM9.651 10.759C9.666 10.746 9.672 10.727 9.687 10.713L10.926 11.502C11.2474 11.7052 11.6198 11.813 12 11.813C12.3802 11.813 12.7526 11.7052 13.074 11.502L14.314 10.713C14.328 10.727 14.334 10.746 14.35 10.759L20.464 16H3.537L9.651 10.759ZM22 14.683L16.067 9.6L22 5.822V14.683ZM3 2H21C21.2652 2 21.5196 2.10536 21.7071 2.29289C21.8946 2.48043 22 2.73478 22 3V3.451L12 9.814L2 3.451V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2Z" fill="white"/>
+                        </svg>
+                        korotkov@electro-rzn.ru
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6 mt-3 d-flex justify-content-start justify-content-lg-center">
+                    <ul class="footer-item">
+                        <li class="footer-list"><a href="../index.html" class="footer-list__link">Главная</a></li>
+                        <li class="footer-list"><a href="./news.html" class="footer-list__link">Новости</a></li>
+                        <li class="footer-list"><a href="./about_us.html" class="footer-list__link">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 mt-3">
+                    <ul class="footer-item">
+                        <li class="footer-list"><a href="./price.html" class="footer-list__link">Прайс</a></li>
+                        <li class="footer-list"><a href="./catalog2.html" class="footer-list__link">Каталог электротоваров</a></li>
+                        <li class="footer-list"><a href="./contact.html" class="footer-list__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-4 mt-lg-3">
+                    <div class="">
+                        <p class="footer__phone-text d-flex align-items-center">
+                            <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_55)">
+                                <path d="M13.4437 1.49375C15.9159 1.49375 18.152 2.49754 19.7779 4.12199C21.4024 5.74793 22.4062 7.98407 22.4062 10.4562C22.4062 10.8685 22.7408 11.2031 23.1531 11.2031C23.5653 11.2031 23.8999 10.8685 23.8999 10.4562C23.8984 4.68887 19.2111 0.00149375 13.4437 0C13.0314 0 12.6968 0.334599 12.6968 0.746873C12.6968 1.15915 13.0314 1.49375 13.4437 1.49375Z" fill="white"/>
+                                <path d="M13.4437 4.48129C15.0921 4.48129 16.5821 5.14974 17.6665 6.23346C18.7502 7.31792 19.4187 8.80793 19.4187 10.4563C19.4187 10.8685 19.7533 11.2031 20.1656 11.2031C20.5778 11.2031 20.9124 10.8685 20.9124 10.4563C20.9109 6.33578 17.5642 2.98904 13.4437 2.98755C13.0314 2.98755 12.6968 3.32215 12.6968 3.73442C12.6968 4.14669 13.0314 4.48129 13.4437 4.48129Z" fill="white"/>
+                                <path d="M13.4437 7.46872C15.0891 7.47171 16.4282 8.8101 16.4312 10.4562C16.4312 10.8685 16.7658 11.2031 17.1781 11.2031C17.5903 11.2031 17.9249 10.8685 17.9249 10.4562C17.9235 7.98257 15.9166 5.97647 13.4437 5.97498C13.0314 5.97498 12.6968 6.30957 12.6968 6.72185C12.6968 7.13412 13.0314 7.46872 13.4437 7.46872Z" fill="white"/>
+                                <path d="M19.1192 13.3309C18.6838 12.8948 18.1057 12.6737 17.5351 12.6744C16.9644 12.6737 16.3864 12.8948 15.9509 13.3309L14.8949 14.387C14.747 14.5341 14.5603 14.6051 14.3668 14.6058C14.1734 14.6051 13.9867 14.5341 13.8388 14.387L9.61373 10.162C9.4666 10.0141 9.39564 9.82735 9.3949 9.63391C9.39564 9.44047 9.4666 9.25375 9.61373 9.10587L10.6698 8.04979C11.106 7.61437 11.3271 7.03629 11.3263 6.46568C11.3271 5.89507 11.106 5.31699 10.6698 4.88156L6.44475 0.656503C6.00858 0.220329 5.43124 -0.000744987 4.85989 1.88607e-06C4.28928 -0.000744987 3.7112 0.220329 3.27577 0.656503L1.16287 2.76866C0.365209 3.55586 -0.00748079 4.55817 -1.20628e-05 5.55599C0.023141 7.57702 1.28685 9.5779 2.80151 11.4854C4.32737 13.3847 6.16766 15.166 7.50083 16.4999C8.83474 17.8331 10.616 19.6734 12.5153 21.1992C14.4228 22.7139 16.4237 23.9776 18.4447 24.0008C19.4426 24.0082 20.4441 23.6355 21.2321 22.8379L23.345 20.7257C23.7812 20.2903 24.0022 19.7122 24.0015 19.1416C24.0022 18.5702 23.7812 17.9929 23.345 17.5575L19.1192 13.3309ZM4.33185 1.71258C4.47973 1.56545 4.66645 1.49449 4.85989 1.49375C5.05333 1.49449 5.24005 1.56545 5.38793 1.71258L9.61298 5.93764C9.76012 6.08552 9.83107 6.27224 9.83182 6.46568C9.83107 6.65912 9.76012 6.84584 9.61298 6.99372L9.08494 7.52176L3.80381 2.24062L4.33185 1.71258ZM20.1753 21.781C19.6383 22.3076 19.1057 22.4988 18.444 22.5063C17.1108 22.5294 15.2422 21.4913 13.4504 20.0341C11.6497 18.5889 9.90053 16.7875 8.55691 15.4431C7.21253 14.0995 5.41183 12.3503 3.96588 10.5496C2.50948 8.75783 1.47133 6.88915 1.49373 5.55599C1.5012 4.89426 1.6924 4.36248 2.21895 3.82474L2.74698 3.2967L8.13492 8.68464C7.99152 8.98787 7.89966 9.30753 7.89966 9.63391C7.89891 10.2045 8.11999 10.7826 8.55616 11.218L12.7812 15.4431C13.2166 15.8793 13.7947 16.1003 14.3653 16.0996C14.6917 16.1003 15.0114 16.0077 15.3146 15.8643L20.7025 21.2523L20.1753 21.781ZM22.2882 19.6681L21.7601 20.1962L16.479 14.915L17.007 14.387C17.1549 14.2399 17.3416 14.1689 17.5351 14.1682C17.7285 14.1689 17.9152 14.2399 18.0631 14.387L22.2882 18.6121C22.4353 18.7599 22.5062 18.9467 22.507 19.1401C22.5055 19.3343 22.4353 19.521 22.2882 19.6681Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1_55">
+                                <rect width="24.0007" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            Позвоните нам и мы рассчитаем <br>
+                            стоимость работ по телефону:
+                        </p>
+                        <a href="tel: +7 920 631 64 84" class="footer__phone-link">+7 (920) 631-64-84</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 d-lg-none">
+                   <div class="">
+                    <p class="footer__add">г. Михайлов, ул. Привокзальный Поселок, д. 7</p>
+                    <p class="footer__contact">Контактное лицо: <span class="footer__contact-admin">Коротков Роман</span></p>
+                    <a href="mailto: korotkov@electro-rzn.ru" class="footer__contact-link d-flex align-items-center">
+                        <svg class="me-2" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3L0 15C0 15.7956 0.31607 16.5587 0.87868 17.1213C1.44129 17.6839 2.20435 18 3 18H21C21.7956 18 22.5587 17.6839 23.1213 17.1213C23.6839 16.5587 24 15.7956 24 15V3C24 2.20435 23.6839 1.44129 23.1213 0.87868C22.5587 0.316071 21.7956 0 21 0ZM2 5.822L7.933 9.6L2 14.683V5.822ZM9.651 10.759C9.666 10.746 9.672 10.727 9.687 10.713L10.926 11.502C11.2474 11.7052 11.6198 11.813 12 11.813C12.3802 11.813 12.7526 11.7052 13.074 11.502L14.314 10.713C14.328 10.727 14.334 10.746 14.35 10.759L20.464 16H3.537L9.651 10.759ZM22 14.683L16.067 9.6L22 5.822V14.683ZM3 2H21C21.2652 2 21.5196 2.10536 21.7071 2.29289C21.8946 2.48043 22 2.73478 22 3V3.451L12 9.814L2 3.451V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2Z" fill="white"/>
+                        </svg>
+                        korotkov@electro-rzn.ru
+                    </a>
+                   </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <div class="col-lg-3 col-12 d-lg-block d-flex justify-content-between align-items-start mb-3 mb-lg-0">
+                    <a href="#" class="footer__link-sub">Политика персоналных данных</a>
+                    <p class="footer__text-sub">© l 2022, Рязань </p>
+                </div>
+                <div class="col-lg-6 col-9">
+                    <p class="footer__text-sub">Данный сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации.</p>
+                </div>
+                <div class="col-lg-2 col-2 d-flex justify-content-end">
+                    <a href="#">
+                        <img loading="lazy"src="../assets/img/png/footer.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+   <script src="../assets/js/plugin/jquery.js"></script>
+   <script src="../assets/js/plugin/mask.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/services.js"></script>
+</body>
+</html>

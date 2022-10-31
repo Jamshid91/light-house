@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прейс</title>
+    <link rel="shortcut icon" href="../assets/img/png/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/style/plugin/bootstrap.css">
+    <link rel="stylesheet" href="../assets/style/css/main.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-between">
+                <div class="col-lg-4 col-2">
+                    <a href="../index.html" class="w-100">
+                        <img loading="lazy"src="../assets/img/png/logo.png" alt="logo" class="nav__logo w-100 d-none d-lg-block">
+                        <img loading="lazy"src="../assets/img/png/favicon.png" alt="logo" class="nav__logo-mob d-lg-none">
+                    </a>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <p class="nav__contact">Контактное лицо: <span class="nav__contact-admin">Коротков Роман</span></p>
+                    <a href="mailto: korotkov@electro-rzn.ru" class="nav__contact-link d-flex align-items-center">
+                        <svg class="me-2" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3L0 15C0 15.7956 0.31607 16.5587 0.87868 17.1213C1.44129 17.6839 2.20435 18 3 18H21C21.7956 18 22.5587 17.6839 23.1213 17.1213C23.6839 16.5587 24 15.7956 24 15V3C24 2.20435 23.6839 1.44129 23.1213 0.87868C22.5587 0.316071 21.7956 0 21 0ZM2 5.822L7.933 9.6L2 14.683V5.822ZM9.651 10.759C9.666 10.746 9.672 10.727 9.687 10.713L10.926 11.502C11.2474 11.7052 11.6198 11.813 12 11.813C12.3802 11.813 12.7526 11.7052 13.074 11.502L14.314 10.713C14.328 10.727 14.334 10.746 14.35 10.759L20.464 16H3.537L9.651 10.759ZM22 14.683L16.067 9.6L22 5.822V14.683ZM3 2H21C21.2652 2 21.5196 2.10536 21.7071 2.29289C21.8946 2.48043 22 2.73478 22 3V3.451L12 9.814L2 3.451V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2Z" fill="white"/>
+                        </svg>
+                        korotkov@electro-rzn.ru
+                    </a>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <p class="nav__phone-text d-flex align-items-center">
+                        <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_55)">
+                            <path d="M13.4437 1.49375C15.9159 1.49375 18.152 2.49754 19.7779 4.12199C21.4024 5.74793 22.4062 7.98407 22.4062 10.4562C22.4062 10.8685 22.7408 11.2031 23.1531 11.2031C23.5653 11.2031 23.8999 10.8685 23.8999 10.4562C23.8984 4.68887 19.2111 0.00149375 13.4437 0C13.0314 0 12.6968 0.334599 12.6968 0.746873C12.6968 1.15915 13.0314 1.49375 13.4437 1.49375Z" fill="white"/>
+                            <path d="M13.4437 4.48129C15.0921 4.48129 16.5821 5.14974 17.6665 6.23346C18.7502 7.31792 19.4187 8.80793 19.4187 10.4563C19.4187 10.8685 19.7533 11.2031 20.1656 11.2031C20.5778 11.2031 20.9124 10.8685 20.9124 10.4563C20.9109 6.33578 17.5642 2.98904 13.4437 2.98755C13.0314 2.98755 12.6968 3.32215 12.6968 3.73442C12.6968 4.14669 13.0314 4.48129 13.4437 4.48129Z" fill="white"/>
+                            <path d="M13.4437 7.46872C15.0891 7.47171 16.4282 8.8101 16.4312 10.4562C16.4312 10.8685 16.7658 11.2031 17.1781 11.2031C17.5903 11.2031 17.9249 10.8685 17.9249 10.4562C17.9235 7.98257 15.9166 5.97647 13.4437 5.97498C13.0314 5.97498 12.6968 6.30957 12.6968 6.72185C12.6968 7.13412 13.0314 7.46872 13.4437 7.46872Z" fill="white"/>
+                            <path d="M19.1192 13.3309C18.6838 12.8948 18.1057 12.6737 17.5351 12.6744C16.9644 12.6737 16.3864 12.8948 15.9509 13.3309L14.8949 14.387C14.747 14.5341 14.5603 14.6051 14.3668 14.6058C14.1734 14.6051 13.9867 14.5341 13.8388 14.387L9.61373 10.162C9.4666 10.0141 9.39564 9.82735 9.3949 9.63391C9.39564 9.44047 9.4666 9.25375 9.61373 9.10587L10.6698 8.04979C11.106 7.61437 11.3271 7.03629 11.3263 6.46568C11.3271 5.89507 11.106 5.31699 10.6698 4.88156L6.44475 0.656503C6.00858 0.220329 5.43124 -0.000744987 4.85989 1.88607e-06C4.28928 -0.000744987 3.7112 0.220329 3.27577 0.656503L1.16287 2.76866C0.365209 3.55586 -0.00748079 4.55817 -1.20628e-05 5.55599C0.023141 7.57702 1.28685 9.5779 2.80151 11.4854C4.32737 13.3847 6.16766 15.166 7.50083 16.4999C8.83474 17.8331 10.616 19.6734 12.5153 21.1992C14.4228 22.7139 16.4237 23.9776 18.4447 24.0008C19.4426 24.0082 20.4441 23.6355 21.2321 22.8379L23.345 20.7257C23.7812 20.2903 24.0022 19.7122 24.0015 19.1416C24.0022 18.5702 23.7812 17.9929 23.345 17.5575L19.1192 13.3309ZM4.33185 1.71258C4.47973 1.56545 4.66645 1.49449 4.85989 1.49375C5.05333 1.49449 5.24005 1.56545 5.38793 1.71258L9.61298 5.93764C9.76012 6.08552 9.83107 6.27224 9.83182 6.46568C9.83107 6.65912 9.76012 6.84584 9.61298 6.99372L9.08494 7.52176L3.80381 2.24062L4.33185 1.71258ZM20.1753 21.781C19.6383 22.3076 19.1057 22.4988 18.444 22.5063C17.1108 22.5294 15.2422 21.4913 13.4504 20.0341C11.6497 18.5889 9.90053 16.7875 8.55691 15.4431C7.21253 14.0995 5.41183 12.3503 3.96588 10.5496C2.50948 8.75783 1.47133 6.88915 1.49373 5.55599C1.5012 4.89426 1.6924 4.36248 2.21895 3.82474L2.74698 3.2967L8.13492 8.68464C7.99152 8.98787 7.89966 9.30753 7.89966 9.63391C7.89891 10.2045 8.11999 10.7826 8.55616 11.218L12.7812 15.4431C13.2166 15.8793 13.7947 16.1003 14.3653 16.0996C14.6917 16.1003 15.0114 16.0077 15.3146 15.8643L20.7025 21.2523L20.1753 21.781ZM22.2882 19.6681L21.7601 20.1962L16.479 14.915L17.007 14.387C17.1549 14.2399 17.3416 14.1689 17.5351 14.1682C17.7285 14.1689 17.9152 14.2399 18.0631 14.387L22.2882 18.6121C22.4353 18.7599 22.5062 18.9467 22.507 19.1401C22.5055 19.3343 22.4353 19.521 22.2882 19.6681Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_1_55">
+                            <rect width="24.0007" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        Позвоните нам и мы рассчитаем <br>
+                        стоимость работ по телефону:
+                    </p>
+                    <a href="tel: +7 920 631 64 84" class="nav__phone-link">+7 (920) 631-64-84</a>
+                </div>
+                <div class="col-7 d-lg-none d-flex justify-content-center flex-column align-items-center">
+                    <div class="w-auto">
+                        <a href="mailto: korotkov@electro-rzn.ru" class="nav__contact-link d-inline-block align-items-center">
+                            <svg class="me-2" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3L0 15C0 15.7956 0.31607 16.5587 0.87868 17.1213C1.44129 17.6839 2.20435 18 3 18H21C21.7956 18 22.5587 17.6839 23.1213 17.1213C23.6839 16.5587 24 15.7956 24 15V3C24 2.20435 23.6839 1.44129 23.1213 0.87868C22.5587 0.316071 21.7956 0 21 0ZM2 5.822L7.933 9.6L2 14.683V5.822ZM9.651 10.759C9.666 10.746 9.672 10.727 9.687 10.713L10.926 11.502C11.2474 11.7052 11.6198 11.813 12 11.813C12.3802 11.813 12.7526 11.7052 13.074 11.502L14.314 10.713C14.328 10.727 14.334 10.746 14.35 10.759L20.464 16H3.537L9.651 10.759ZM22 14.683L16.067 9.6L22 5.822V14.683ZM3 2H21C21.2652 2 21.5196 2.10536 21.7071 2.29289C21.8946 2.48043 22 2.73478 22 3V3.451L12 9.814L2 3.451V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2Z" fill="white"/>
+                            </svg>
+                            korotkov@electro-rzn.ru
+                        </a> <br>
+                        <a href="tel: +7 920 631 64 84" class="nav__phone-link">
+                            <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_55)">
+                                <path d="M13.4437 1.49375C15.9159 1.49375 18.152 2.49754 19.7779 4.12199C21.4024 5.74793 22.4062 7.98407 22.4062 10.4562C22.4062 10.8685 22.7408 11.2031 23.1531 11.2031C23.5653 11.2031 23.8999 10.8685 23.8999 10.4562C23.8984 4.68887 19.2111 0.00149375 13.4437 0C13.0314 0 12.6968 0.334599 12.6968 0.746873C12.6968 1.15915 13.0314 1.49375 13.4437 1.49375Z" fill="white"/>
+                                <path d="M13.4437 4.48129C15.0921 4.48129 16.5821 5.14974 17.6665 6.23346C18.7502 7.31792 19.4187 8.80793 19.4187 10.4563C19.4187 10.8685 19.7533 11.2031 20.1656 11.2031C20.5778 11.2031 20.9124 10.8685 20.9124 10.4563C20.9109 6.33578 17.5642 2.98904 13.4437 2.98755C13.0314 2.98755 12.6968 3.32215 12.6968 3.73442C12.6968 4.14669 13.0314 4.48129 13.4437 4.48129Z" fill="white"/>
+                                <path d="M13.4437 7.46872C15.0891 7.47171 16.4282 8.8101 16.4312 10.4562C16.4312 10.8685 16.7658 11.2031 17.1781 11.2031C17.5903 11.2031 17.9249 10.8685 17.9249 10.4562C17.9235 7.98257 15.9166 5.97647 13.4437 5.97498C13.0314 5.97498 12.6968 6.30957 12.6968 6.72185C12.6968 7.13412 13.0314 7.46872 13.4437 7.46872Z" fill="white"/>
+                                <path d="M19.1192 13.3309C18.6838 12.8948 18.1057 12.6737 17.5351 12.6744C16.9644 12.6737 16.3864 12.8948 15.9509 13.3309L14.8949 14.387C14.747 14.5341 14.5603 14.6051 14.3668 14.6058C14.1734 14.6051 13.9867 14.5341 13.8388 14.387L9.61373 10.162C9.4666 10.0141 9.39564 9.82735 9.3949 9.63391C9.39564 9.44047 9.4666 9.25375 9.61373 9.10587L10.6698 8.04979C11.106 7.61437 11.3271 7.03629 11.3263 6.46568C11.3271 5.89507 11.106 5.31699 10.6698 4.88156L6.44475 0.656503C6.00858 0.220329 5.43124 -0.000744987 4.85989 1.88607e-06C4.28928 -0.000744987 3.7112 0.220329 3.27577 0.656503L1.16287 2.76866C0.365209 3.55586 -0.00748079 4.55817 -1.20628e-05 5.55599C0.023141 7.57702 1.28685 9.5779 2.80151 11.4854C4.32737 13.3847 6.16766 15.166 7.50083 16.4999C8.83474 17.8331 10.616 19.6734 12.5153 21.1992C14.4228 22.7139 16.4237 23.9776 18.4447 24.0008C19.4426 24.0082 20.4441 23.6355 21.2321 22.8379L23.345 20.7257C23.7812 20.2903 24.0022 19.7122 24.0015 19.1416C24.0022 18.5702 23.7812 17.9929 23.345 17.5575L19.1192 13.3309ZM4.33185 1.71258C4.47973 1.56545 4.66645 1.49449 4.85989 1.49375C5.05333 1.49449 5.24005 1.56545 5.38793 1.71258L9.61298 5.93764C9.76012 6.08552 9.83107 6.27224 9.83182 6.46568C9.83107 6.65912 9.76012 6.84584 9.61298 6.99372L9.08494 7.52176L3.80381 2.24062L4.33185 1.71258ZM20.1753 21.781C19.6383 22.3076 19.1057 22.4988 18.444 22.5063C17.1108 22.5294 15.2422 21.4913 13.4504 20.0341C11.6497 18.5889 9.90053 16.7875 8.55691 15.4431C7.21253 14.0995 5.41183 12.3503 3.96588 10.5496C2.50948 8.75783 1.47133 6.88915 1.49373 5.55599C1.5012 4.89426 1.6924 4.36248 2.21895 3.82474L2.74698 3.2967L8.13492 8.68464C7.99152 8.98787 7.89966 9.30753 7.89966 9.63391C7.89891 10.2045 8.11999 10.7826 8.55616 11.218L12.7812 15.4431C13.2166 15.8793 13.7947 16.1003 14.3653 16.0996C14.6917 16.1003 15.0114 16.0077 15.3146 15.8643L20.7025 21.2523L20.1753 21.781ZM22.2882 19.6681L21.7601 20.1962L16.479 14.915L17.007 14.387C17.1549 14.2399 17.3416 14.1689 17.5351 14.1682C17.7285 14.1689 17.9152 14.2399 18.0631 14.387L22.2882 18.6121C22.4353 18.7599 22.5062 18.9467 22.507 19.1401C22.5055 19.3343 22.4353 19.521 22.2882 19.6681Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1_55">
+                                <rect width="24.0007" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            +7 (920) 631-64-84
+                        </a>
+                    </div>
+                </div>
+                <div class="col-2 d-lg-none">
+                    <div class="menu-burger justify-content-center d-flex">
+                        <div class="menu-burger-item flex justify-between flex-col">
+                            <div class="menu-burger-list" id="burger_list1"></div>
+                            <div class="menu-burger-list" id="burger_list2"></div>
+                            <div class="menu-burger-list" id="burger_list3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header d-none d-lg-flex">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                        <ul class="header-item">
+                            <li class="header-list"><a href="../index.html" class="header-list__link">главная</a></li>
+                            <li class="header-list"><a href="./news.html" class="header-list__link">новости</a></li>
+                            <li class="header-list"><a href="./about_us.html" class="header-list__link">о нас</a></li>
+                            <li class="header-list"><a href="./price.html" class="header-list__link active">прайс</a></li>
+                            <li class="header-list"><a href="./catalog2.html" class="header-list__link">каталог электротоваров</a></li>
+                            <li class="header-list"><a href="./contact.html" class="header-list__link">контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu">
+        <ul class="d-flex justify-content-center flex-column">
+            <li class="mobile-menu-list"><a href="../index.html" class="mobile-menu-list__link">главная</a></li>
+            <li class="mobile-menu-list"><a href="./news.html" class="mobile-menu-list__link">новости</a></li>
+            <li class="mobile-menu-list"><a href="./about_us.html" class="mobile-menu-list__link">о нас</a></li>
+            <li class="mobile-menu-list"><a href="./price.html" class="mobile-menu-list__link active">прайс</a></li>
+            <li class="mobile-menu-list"><a href="./catalog2.html" class="mobile-menu-list__link">каталог электротоваров</a></li>
+            <li class="mobile-menu-list"><a href="./contact.html" class="mobile-menu-list__link">контакты</a></li>
+        </ul>
+    </div>
+    <!-- End header -->
+
+    <main class="main position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex">
+                    <div class="services">
+                        <div class="services__close d-md-none">
+                            <svg class="" fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"/></svg>
+                        </div>
+                        <p class="services__title">Наши услуги</p>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Электромонтажные работы под ключ</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Ремонт и замена старой электрики</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Прокладка кабелей</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Монтаж электропроводки</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Проектирование электроснабжения</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Замена электропроводки</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Ремонт электропроводки</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Прокладка электропроводки</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Замена счетчиков электроэнергии</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Подключение электроплит</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Монтаж и подключение бензо/дизель генераторов с автозапуском и без</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Установка систем «Умный Дом»</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Сборка ВРУ, ГРЩ</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Монтаж и подключение
+                                стабилизаторов напряжения и ИБП</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Установка точечных светильников</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Электропроводка в частном доме</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Установка домофонов, охранные 
+                                системы и видеонаблюдение</a>
+                        </div>
+                        <div class="services-list">
+                            <a href="#" class="services-list__link">Расчет стоимости работ online</a>
+                        </div>
+
+                        <form class="services-form">
+                            <p class="services-form__title">Заявка на расчет <br> стоимости работ</p>
+                            <input type="text" class="services-form__inp" name="User name" placeholder="Введите Ваше имя" required>
+                            <input type="text" class="services-form__inp phone" name="User phone" placeholder="Введите Ваш телефон" required>
+                            <button type="submit" class="services-form__btn">отправить заявку</button>
+                        </form>
+                    </div>
+                    <div class="main-item">
+                        <div class="main-item-sup">
+                            <a href="../index.html" class="main-item-sup__home">Главная</a>
+                            <span> » </span>
+                            <span class="main-item-sup__text">Прейс</span>
+                        </div>
+                        <div class="services__btn d-md-none">Наши услуги</div>
+                        <p class="main-item__title">Прейс</p>
+                        <p class="main-item__title-sub">Расценки на электромонтажные работы: помощь профессионалов обязательна</p>
+                        <img src="../assets/img/png/price.png" alt="" class="main-price__img">
+                        <p class="main-item__text">По статистике 97% пожаров в России происходят по причине неисправности устаревшей электропроводки. Как не стать пострадавшим в данной ситуации? Разумеется, вовремя, при возникновении самых первых признаков неисправности, обратиться за помощью к профессионалам, таким, которые работают в нашей компании. Мигание света при включении нескольких бытовых приборов или его автоматическое отключение — повод для беспокойства. И не стоит бояться расценок на проведение электромонтажных работ. Например, у нас цены на электромонтажные работы одни из самых минимальных в Рязани.На электромонтажных работах экономить нельзя</p><br>
+                        <p class="main-item__text">Каждому потребителю понятно, что расценки на электромонтажные работы зависят от сложности и объема выполняемых работ и стоимости расходного материала. Позвонив в нашу компанию, вы можете узнать об этом более подробно. Мы сможем точно рассчитать цены на электромонтажные работы, когда будем знать о ваших возможностях и индивидуальных пожеланиях.</p><br>
+                        <p class="main-item__text">Цены на электромонтажные работы в нашей компании не завышены, а отображают реальную стоимость проведения монтажа. Более того, теперь вам не надо будет посещать <a href="#" class="text__link">магазин электротоваров</a> и пытаться разобраться в назначении проводов или кабеля для подключения электроплиты. Мы предоставляем возможность приобретения расходных материалов у нас на выгодных условиях.</p><br>
+                        <p class="main-item__text-title">Электромонтажные работы: прайс-лист отображает все варианты</p><br>
+                        <p class="main-item__text">В нашем прайс-листе на электромонтажные работы мы постарались отобразить все варианты проведения работ и их стоимость. Важно отметить, что цена на электромонтажные работы одного вида может быть разной, в зависимости от размера помещения и необходимости применения специального оборудования.</p><br>
+                        <p class="main-item__text">Обратите внимание, что мы проводим и подготовительные перед электромонтажом работы, такие как штробление, сверление отверстий перед установкой светильников в гипсокартоне, демонтаж старой электропроводки.</p><br>
+                        <p class="main-item__text">Прайс на электромонтажные работы содержит прейскурант цен, которые реально отображают стоимость предлагаемых видов работ. Не в наших интересах завышать цены, ведь среднюю стоимость по Рязани можно легко узнать в Интернете. Обращайтесь, перемены к лучшему приятны владельцу каждой квартиры, дома или офиса!</p><br>
+                        <div class="">
+                            <div class="services-item">
+                                <div class="services-item-title">
+                                    <span class="services-item-title__text">Услуга</span>
+                                    <span class="services-item-title__btn">+</span>
+                                </div>
+                                <div class="services-item-info">
+                                    <div class="d-flex align-items-end flex-nowrap">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">250 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">5 570 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">2150 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">7300 руб.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="services-item">
+                                <div class="services-item-title">
+                                    <span class="services-item-title__text">Услуга два</span>
+                                    <span class="services-item-title__btn">+</span>
+                                </div>
+                                <div class="services-item-info">
+                                    <div class="d-flex align-items-end flex-nowrap">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">250 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">5 570 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">2150 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">7300 руб.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="services-item">
+                                <div class="services-item-title">
+                                    <span class="services-item-title__text">Услуга три</span>
+                                    <span class="services-item-title__btn">+</span>
+                                </div>
+                                <div class="services-item-info">
+                                    <div class="d-flex align-items-end flex-nowrap">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">250 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">5 570 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">2150 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">7300 руб.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="services-item">
+                                <div class="services-item-title">
+                                    <span class="services-item-title__text">Услуга четыре</span>
+                                    <span class="services-item-title__btn">+</span>
+                                </div>
+                                <div class="services-item-info">
+                                    <div class="d-flex align-items-end flex-nowrap">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">250 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">5 570 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">2150 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">7300 руб.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="services-item">
+                                <div class="services-item-title">
+                                    <span class="services-item-title__text">Услуга пять</span>
+                                    <span class="services-item-title__btn">+</span>
+                                </div>
+                                <div class="services-item-info">
+                                    <div class="d-flex align-items-end flex-nowrap">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">250 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">5 570 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">2150 руб.</p>
+                                    </div>
+                                    <div class="d-flex align-items-end flex-nowrap mt-3">
+                                        <p class="services-item-info__text">Название услуги</p>
+                                        <div class="doted w-100"></div>
+                                        <p class="services-item-info__text">7300 руб.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="../assets/img/png/about-us.png" download="" class="download">
+                            <svg class="me-2" width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 9C7.60217 9 7.22064 9.15804 6.93934 9.43934C6.65803 9.72064 6.5 10.1022 6.5 10.5C6.5 10.8978 6.65803 11.2794 6.93934 11.5607C7.22064 11.842 7.60217 12 8 12H9.5C9.89782 12 10.2794 11.842 10.5607 11.5607C10.842 11.2794 11 10.8978 11 10.5C11 10.1022 10.842 9.72064 10.5607 9.43934C10.2794 9.15804 9.89782 9 9.5 9H8ZM15.5 27H5C4.60217 27 4.22064 26.842 3.93934 26.5607C3.65804 26.2794 3.5 25.8978 3.5 25.5V4.5C3.5 4.10217 3.65804 3.72064 3.93934 3.43934C4.22064 3.15804 4.60217 3 5 3H12.5V7.5C12.5 8.69347 12.9741 9.83807 13.818 10.682C14.6619 11.5259 15.8065 12 17 12H21.5V15C21.5 15.3978 21.658 15.7794 21.9393 16.0607C22.2206 16.342 22.6022 16.5 23 16.5C23.3978 16.5 23.7794 16.342 24.0607 16.0607C24.342 15.7794 24.5 15.3978 24.5 15V10.5C24.5 10.5 24.5 10.5 24.5 10.41C24.4844 10.2722 24.4542 10.1364 24.41 10.005V9.87C24.3379 9.71577 24.2417 9.574 24.125 9.45L15.125 0.45C15.001 0.333324 14.8592 0.237121 14.705 0.165C14.6554 0.156314 14.6046 0.156314 14.555 0.165C14.4091 0.0870046 14.2524 0.031383 14.09 0H5C3.80653 0 2.66193 0.474106 1.81802 1.31802C0.974106 2.16193 0.5 3.30653 0.5 4.5V25.5C0.5 26.6935 0.974106 27.8381 1.81802 28.682C2.66193 29.5259 3.80653 30 5 30H15.5C15.8978 30 16.2794 29.842 16.5607 29.5607C16.842 29.2794 17 28.8978 17 28.5C17 28.1022 16.842 27.7206 16.5607 27.4393C16.2794 27.158 15.8978 27 15.5 27ZM15.5 5.115L19.385 9H17C16.6022 9 16.2206 8.84196 15.9393 8.56066C15.658 8.27936 15.5 7.89782 15.5 7.5V5.115ZM17 15H8C7.60217 15 7.22064 15.158 6.93934 15.4393C6.65803 15.7206 6.5 16.1022 6.5 16.5C6.5 16.8978 6.65803 17.2794 6.93934 17.5607C7.22064 17.842 7.60217 18 8 18H17C17.3978 18 17.7794 17.842 18.0607 17.5607C18.342 17.2794 18.5 16.8978 18.5 16.5C18.5 16.1022 18.342 15.7206 18.0607 15.4393C17.7794 15.158 17.3978 15 17 15ZM27.065 24.435C26.9256 24.2944 26.7596 24.1828 26.5769 24.1067C26.3941 24.0305 26.198 23.9913 26 23.9913C25.802 23.9913 25.6059 24.0305 25.4231 24.1067C25.2403 24.1828 25.0744 24.2944 24.935 24.435L24.5 24.885V21C24.5 20.6022 24.342 20.2206 24.0607 19.9393C23.7794 19.658 23.3978 19.5 23 19.5C22.6022 19.5 22.2206 19.658 21.9393 19.9393C21.658 20.2206 21.5 20.6022 21.5 21V24.885L21.065 24.435C20.7825 24.1525 20.3994 23.9939 20 23.9939C19.6005 23.9939 19.2175 24.1525 18.935 24.435C18.6525 24.7175 18.4939 25.1005 18.4939 25.5C18.4939 25.8995 18.6525 26.2825 18.935 26.565L21.935 29.565C22.0777 29.7016 22.2459 29.8086 22.43 29.88C22.6095 29.9594 22.8037 30.0003 23 30.0003C23.1963 30.0003 23.3904 29.9594 23.57 29.88C23.7541 29.8086 23.9223 29.7016 24.065 29.565L27.065 26.565C27.2056 26.4256 27.3172 26.2597 27.3933 26.0769C27.4695 25.8941 27.5087 25.698 27.5087 25.5C27.5087 25.302 27.4695 25.1059 27.3933 24.9231C27.3172 24.7403 27.2056 24.5744 27.065 24.435ZM14 24C14.3978 24 14.7794 23.842 15.0607 23.5607C15.342 23.2794 15.5 22.8978 15.5 22.5C15.5 22.1022 15.342 21.7206 15.0607 21.4393C14.7794 21.158 14.3978 21 14 21H8C7.60217 21 7.22064 21.158 6.93934 21.4393C6.65803 21.7206 6.5 22.1022 6.5 22.5C6.5 22.8978 6.65803 23.2794 6.93934 23.5607C7.22064 23.842 7.60217 24 8 24H14Z" fill="#0559A4"/>
+                            </svg>
+                            <span class="download__text">Скачать актуальный прайс</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- End main -->
+
+    <div class="aside">
+        <div class="aside-bg"></div>
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-lg-7 col-md-10">
+                    <form class="aside-form text-center">
+                        <p class="aside-form__title">Заявка на расчет <br> стоимости работ</p>
+                        <p class="aside-form__text">Наши специалисты перезвонят вам, рассчитают <br> стоимость работ и проконсультируют <br>
+                            <strong>по всем интересующим вас вопросам</strong></p>
+                        <div class="d-flex justify-content-between flex-wrap">
+                            <input type="text" class="aside-form__inp" maxlength="15" minlength="3" placeholder="Введите Ваше имя" required>
+                            <input type="tel" class="aside-form__inp phone" placeholder="Введите Ваш телефон" required>
+                        </div>
+                        <button class="aside-form__btn" type="submit">отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End aside -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row d-flex justify-content-between row-sup">
+                <div class="col-12 text-center d-lg-none mb-4">
+                    <a href="./index.html" class="w-100">
+                        <img loading="lazy"src="../assets/img/png/logo.png" alt="logo" class="footer__logo">
+                    </a>
+                </div>
+                <div class="col-lg-3 pe-0 d-none d-lg-block">
+                    <a href="../index.html" class="w-100">
+                        <img loading="lazy"src="../assets/img/png/logo.png" alt="logo" class="footer__logo">
+                    </a>
+                    <p class="footer__add">г. Михайлов, ул. Привокзальный Поселок, д. 7</p>
+                    <p class="footer__contact">Контактное лицо: <span class="footer__contact-admin">Коротков Роман</span></p>
+                    <a href="mailto: korotkov@electro-rzn.ru" class="footer__contact-link d-flex align-items-center">
+                        <svg class="me-2" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3L0 15C0 15.7956 0.31607 16.5587 0.87868 17.1213C1.44129 17.6839 2.20435 18 3 18H21C21.7956 18 22.5587 17.6839 23.1213 17.1213C23.6839 16.5587 24 15.7956 24 15V3C24 2.20435 23.6839 1.44129 23.1213 0.87868C22.5587 0.316071 21.7956 0 21 0ZM2 5.822L7.933 9.6L2 14.683V5.822ZM9.651 10.759C9.666 10.746 9.672 10.727 9.687 10.713L10.926 11.502C11.2474 11.7052 11.6198 11.813 12 11.813C12.3802 11.813 12.7526 11.7052 13.074 11.502L14.314 10.713C14.328 10.727 14.334 10.746 14.35 10.759L20.464 16H3.537L9.651 10.759ZM22 14.683L16.067 9.6L22 5.822V14.683ZM3 2H21C21.2652 2 21.5196 2.10536 21.7071 2.29289C21.8946 2.48043 22 2.73478 22 3V3.451L12 9.814L2 3.451V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2Z" fill="white"/>
+                        </svg>
+                        korotkov@electro-rzn.ru
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6 mt-3 d-flex justify-content-start justify-content-lg-center">
+                    <ul class="footer-item">
+                        <li class="footer-list"><a href="../index.html" class="footer-list__link">Главная</a></li>
+                        <li class="footer-list"><a href="./news.html" class="footer-list__link">Новости</a></li>
+                        <li class="footer-list"><a href="./about_us.html" class="footer-list__link">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 mt-3">
+                    <ul class="footer-item">
+                        <li class="footer-list"><a href="./price.html" class="footer-list__link">Прайс</a></li>
+                        <li class="footer-list"><a href="./catalog2.html" class="footer-list__link">Каталог электротоваров</a></li>
+                        <li class="footer-list"><a href="./contact.html" class="footer-list__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-4 mt-lg-3">
+                    <div class="">
+                        <p class="footer__phone-text d-flex align-items-center">
+                            <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_55)">
+                                <path d="M13.4437 1.49375C15.9159 1.49375 18.152 2.49754 19.7779 4.12199C21.4024 5.74793 22.4062 7.98407 22.4062 10.4562C22.4062 10.8685 22.7408 11.2031 23.1531 11.2031C23.5653 11.2031 23.8999 10.8685 23.8999 10.4562C23.8984 4.68887 19.2111 0.00149375 13.4437 0C13.0314 0 12.6968 0.334599 12.6968 0.746873C12.6968 1.15915 13.0314 1.49375 13.4437 1.49375Z" fill="white"/>
+                                <path d="M13.4437 4.48129C15.0921 4.48129 16.5821 5.14974 17.6665 6.23346C18.7502 7.31792 19.4187 8.80793 19.4187 10.4563C19.4187 10.8685 19.7533 11.2031 20.1656 11.2031C20.5778 11.2031 20.9124 10.8685 20.9124 10.4563C20.9109 6.33578 17.5642 2.98904 13.4437 2.98755C13.0314 2.98755 12.6968 3.32215 12.6968 3.73442C12.6968 4.14669 13.0314 4.48129 13.4437 4.48129Z" fill="white"/>
+                                <path d="M13.4437 7.46872C15.0891 7.47171 16.4282 8.8101 16.4312 10.4562C16.4312 10.8685 16.7658 11.2031 17.1781 11.2031C17.5903 11.2031 17.9249 10.8685 17.9249 10.4562C17.9235 7.98257 15.9166 5.97647 13.4437 5.97498C13.0314 5.97498 12.6968 6.30957 12.6968 6.72185C12.6968 7.13412 13.0314 7.46872 13.4437 7.46872Z" fill="white"/>
+                                <path d="M19.1192 13.3309C18.6838 12.8948 18.1057 12.6737 17.5351 12.6744C16.9644 12.6737 16.3864 12.8948 15.9509 13.3309L14.8949 14.387C14.747 14.5341 14.5603 14.6051 14.3668 14.6058C14.1734 14.6051 13.9867 14.5341 13.8388 14.387L9.61373 10.162C9.4666 10.0141 9.39564 9.82735 9.3949 9.63391C9.39564 9.44047 9.4666 9.25375 9.61373 9.10587L10.6698 8.04979C11.106 7.61437 11.3271 7.03629 11.3263 6.46568C11.3271 5.89507 11.106 5.31699 10.6698 4.88156L6.44475 0.656503C6.00858 0.220329 5.43124 -0.000744987 4.85989 1.88607e-06C4.28928 -0.000744987 3.7112 0.220329 3.27577 0.656503L1.16287 2.76866C0.365209 3.55586 -0.00748079 4.55817 -1.20628e-05 5.55599C0.023141 7.57702 1.28685 9.5779 2.80151 11.4854C4.32737 13.3847 6.16766 15.166 7.50083 16.4999C8.83474 17.8331 10.616 19.6734 12.5153 21.1992C14.4228 22.7139 16.4237 23.9776 18.4447 24.0008C19.4426 24.0082 20.4441 23.6355 21.2321 22.8379L23.345 20.7257C23.7812 20.2903 24.0022 19.7122 24.0015 19.1416C24.0022 18.5702 23.7812 17.9929 23.345 17.5575L19.1192 13.3309ZM4.33185 1.71258C4.47973 1.56545 4.66645 1.49449 4.85989 1.49375C5.05333 1.49449 5.24005 1.56545 5.38793 1.71258L9.61298 5.93764C9.76012 6.08552 9.83107 6.27224 9.83182 6.46568C9.83107 6.65912 9.76012 6.84584 9.61298 6.99372L9.08494 7.52176L3.80381 2.24062L4.33185 1.71258ZM20.1753 21.781C19.6383 22.3076 19.1057 22.4988 18.444 22.5063C17.1108 22.5294 15.2422 21.4913 13.4504 20.0341C11.6497 18.5889 9.90053 16.7875 8.55691 15.4431C7.21253 14.0995 5.41183 12.3503 3.96588 10.5496C2.50948 8.75783 1.47133 6.88915 1.49373 5.55599C1.5012 4.89426 1.6924 4.36248 2.21895 3.82474L2.74698 3.2967L8.13492 8.68464C7.99152 8.98787 7.89966 9.30753 7.89966 9.63391C7.89891 10.2045 8.11999 10.7826 8.55616 11.218L12.7812 15.4431C13.2166 15.8793 13.7947 16.1003 14.3653 16.0996C14.6917 16.1003 15.0114 16.0077 15.3146 15.8643L20.7025 21.2523L20.1753 21.781ZM22.2882 19.6681L21.7601 20.1962L16.479 14.915L17.007 14.387C17.1549 14.2399 17.3416 14.1689 17.5351 14.1682C17.7285 14.1689 17.9152 14.2399 18.0631 14.387L22.2882 18.6121C22.4353 18.7599 22.5062 18.9467 22.507 19.1401C22.5055 19.3343 22.4353 19.521 22.2882 19.6681Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1_55">
+                                <rect width="24.0007" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            Позвоните нам и мы рассчитаем <br>
+                            стоимость работ по телефону:
+                        </p>
+                        <a href="tel: +7 920 631 64 84" class="footer__phone-link">+7 (920) 631-64-84</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 d-lg-none">
+                   <div class="">
+                    <p class="footer__add">г. Михайлов, ул. Привокзальный Поселок, д. 7</p>
+                    <p class="footer__contact">Контактное лицо: <span class="footer__contact-admin">Коротков Роман</span></p>
+                    <a href="mailto: korotkov@electro-rzn.ru" class="footer__contact-link d-flex align-items-center">
+                        <svg class="me-2" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3L0 15C0 15.7956 0.31607 16.5587 0.87868 17.1213C1.44129 17.6839 2.20435 18 3 18H21C21.7956 18 22.5587 17.6839 23.1213 17.1213C23.6839 16.5587 24 15.7956 24 15V3C24 2.20435 23.6839 1.44129 23.1213 0.87868C22.5587 0.316071 21.7956 0 21 0ZM2 5.822L7.933 9.6L2 14.683V5.822ZM9.651 10.759C9.666 10.746 9.672 10.727 9.687 10.713L10.926 11.502C11.2474 11.7052 11.6198 11.813 12 11.813C12.3802 11.813 12.7526 11.7052 13.074 11.502L14.314 10.713C14.328 10.727 14.334 10.746 14.35 10.759L20.464 16H3.537L9.651 10.759ZM22 14.683L16.067 9.6L22 5.822V14.683ZM3 2H21C21.2652 2 21.5196 2.10536 21.7071 2.29289C21.8946 2.48043 22 2.73478 22 3V3.451L12 9.814L2 3.451V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2Z" fill="white"/>
+                        </svg>
+                        korotkov@electro-rzn.ru
+                    </a>
+                   </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <div class="col-lg-3 col-12 d-lg-block d-flex justify-content-between align-items-start mb-3 mb-lg-0">
+                    <a href="#" class="footer__link-sub">Политика персоналных данных</a>
+                    <p class="footer__text-sub">© l 2022, Рязань </p>
+                </div>
+                <div class="col-lg-6 col-9">
+                    <p class="footer__text-sub">Данный сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации.</p>
+                </div>
+                <div class="col-lg-2 col-2 d-flex justify-content-end">
+                    <a href="#">
+                        <img loading="lazy"src="../assets/img/png/footer.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+   <script src="../assets/js/plugin/jquery.js"></script>
+   <script src="../assets/js/plugin/mask.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/services.js"></script>
+    <script src="../assets/js/price.js"></script>
+</body>
+</html>
