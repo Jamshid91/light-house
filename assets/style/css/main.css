@@ -1074,6 +1074,9 @@ input {
 .main .services-item-info__text {
   white-space: nowrap;
 }
+.main .services-item-info__text:hover {
+  color: #0559A4;
+}
 
 .main .services-item-info .doted {
   border-bottom: 2px dotted #0D0802;
@@ -1118,6 +1121,7 @@ input {
 }
 
 .main .catalog {
+  display: inline-block;
   width: 100%;
   background-color: #fff;
   padding: 6px 25px 11px;
@@ -1136,6 +1140,7 @@ input {
   line-height: 19.5px;
   color: #0559A4;
   border-bottom: 2px dashed #0559A4;
+  padding-bottom: 3px;
 }
 
 .main .catalog:hover {
